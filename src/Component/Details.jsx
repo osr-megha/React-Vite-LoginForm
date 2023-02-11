@@ -18,7 +18,9 @@ const Details = (props) => {
   useEffect(() => {
     console.log('Details :: props >>> ', props);
     if (!props.globalState.loggedIn){
+      alert("Please fill all details correctly")
       return navigate("/login");
+      
     }
     console.log('Details :: loggedIn >>> ', props.globalState.loggedIn);
     fetch("https://jsonplaceholder.typicode.com/users")
